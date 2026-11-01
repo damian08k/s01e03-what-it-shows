@@ -1,0 +1,35 @@
+---
+layout: runbook
+title: '#4471 · two date causes'
+owner: support desk
+status: split
+reviewed: 2026-11-01
+signature: damian08k
+---
+
+<script>
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+The export contains **412 unique reports** merged into #4471. It has 427 rows; 15 repeated report IDs count once. The reports point to two different date problems, so #4471 should not stay as one undivided bug.
+
+## Problems found
+
+| Cause | Reports | Evidence | GitHub issue |
+| --- | ---: | --- | --- |
+| `parser` | **379** | 204 app, 150 email, 25 form; all 11 tenants | [#1 — month-first parser](https://github.com/damian08k/s01e03-what-it-shows/issues/1) |
+| `hint` | **33** | 33 booking-v3 form submissions across three day-first tenants | [#2 — booking-v3 hint](https://github.com/damian08k/s01e03-what-it-shows/issues/2) |
+
+## Why they are separate
+
+The shared parser treats dates as month-first. For tenants whose locale writes day first, that can reverse the day and month. This is the `parser` cause.
+
+The `hint` cause is limited to booking-v3 forms in day-first tenants. The form tells people to enter `MM/DD/YYYY`, while the tenant's date handling reads day first. The form hint creates a different failure from the shared parser.
+
+The tenant locale and booking form determine the cause. The intake tag is only a guess and disagrees with that classification on 38 unique reports. The desk noted five reports as one-day moves; all five remain in the `parser` group under the tenant and form rules.
+
+## Counting rule
+
+The report export overlaps: count each report ID once. This leaves 412 reports across the two causes, matching the desk's total after deduplication.
+
+<RenderStamp {signature} />
