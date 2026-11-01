@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 · two date causes'
 owner: support desk
-status: split
+status: closed
 reviewed: 2026-11-01
 signature: damian08k
 ---
@@ -19,6 +19,15 @@ The export contains **412 unique reports** merged into #4471. It has 427 rows; 1
 | --- | ---: | --- | --- |
 | `parser` | **379** | 204 app, 150 email, 25 form; all 11 tenants | [#1 — month-first parser](https://github.com/damian08k/s01e03-what-it-shows/issues/1) |
 | `hint` | **33** | 33 booking-v3 form submissions across three day-first tenants | [#2 — booking-v3 hint](https://github.com/damian08k/s01e03-what-it-shows/issues/2) |
+
+## Desk update · 05 October
+
+The course page reports that #4471 is closed. The desk marked the `parser` cause fixed with `fix(dates): parse dd/mm for eu locales`. It marked the `hint` cause won't fix because the booking-v3 form was retired.
+
+| Cause | Desk outcome | Tracking issue |
+| --- | --- | --- |
+| `parser` | Fixed | [#1 — completed](https://github.com/damian08k/s01e03-what-it-shows/issues/1) |
+| `hint` | Won't fix · booking-v3 form retired | [#2 — not planned](https://github.com/damian08k/s01e03-what-it-shows/issues/2) |
 
 ## Why they are separate
 

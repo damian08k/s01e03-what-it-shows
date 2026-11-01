@@ -10,3 +10,5 @@ The repository is intended to have these two GitHub issues:
 2. `Booking-v3 date hint conflicts with day-first tenants (33 reports)`
 
 The rendered preview is at [`rendered/kb/incidents/4471/index.html`](rendered/kb/incidents/4471/index.html).
+
+The course page later marked #4471 closed on 05 October: the parser issue is fixed, while booking-v3 was retired and its hint issue will not be fixed.

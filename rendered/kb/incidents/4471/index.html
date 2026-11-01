@@ -26,7 +26,7 @@
     <header>
       <a class="crumb" href="/kb">support desk · kb</a>
       <h1>#4471 · two date causes</h1>
-      <p class="meta"><span>owner <b>support desk</b></span><span class="status">split</span><span>reviewed 2026-11-01 · 0 days ago</span></p>
+      <p class="meta"><span>owner <b>support desk</b></span><span class="status">closed</span><span>reviewed 2026-11-01 · 0 days ago</span></p>
     </header>
     <main>
       <p>The export contains <strong>412 unique reports</strong> merged into #4471. It has 427 rows; 15 repeated report IDs count once. The reports point to two different date problems, so #4471 should not stay as one undivided bug.</p>
@@ -36,6 +36,15 @@
         <tbody>
           <tr><td><code>parser</code></td><td><strong>379</strong></td><td>204 app, 150 email, 25 form; all 11 tenants</td><td><a href="https://github.com/damian08k/s01e03-what-it-shows/issues/1">#1 — month-first parser</a></td></tr>
           <tr><td><code>hint</code></td><td><strong>33</strong></td><td>33 booking-v3 form submissions across three day-first tenants</td><td><a href="https://github.com/damian08k/s01e03-what-it-shows/issues/2">#2 — booking-v3 hint</a></td></tr>
+        </tbody>
+      </table>
+      <h2>Desk update · 05 October</h2>
+      <p>The course page reports that #4471 is closed. The desk marked the <code>parser</code> cause fixed with <code>fix(dates): parse dd/mm for eu locales</code>. It marked the <code>hint</code> cause won't fix because the booking-v3 form was retired.</p>
+      <table>
+        <thead><tr><th>Cause</th><th>Desk outcome</th><th>Tracking issue</th></tr></thead>
+        <tbody>
+          <tr><td><code>parser</code></td><td>Fixed</td><td><a href="https://github.com/damian08k/s01e03-what-it-shows/issues/1">#1 — completed</a></td></tr>
+          <tr><td><code>hint</code></td><td>Won't fix · booking-v3 form retired</td><td><a href="https://github.com/damian08k/s01e03-what-it-shows/issues/2">#2 — not planned</a></td></tr>
         </tbody>
       </table>
       <h2>Why they are separate</h2>
